@@ -1,7 +1,7 @@
 {
-  "name": "tsib",
+  "name": "template-typescript",
   "license": "MIT-0",
-  "repository": "github:chykon/tsib",
+  "repository": "github:chykon/template-typescript",
   "version": "0.1.0-prototype.1",
   "scripts": {
     "tsc": "tsc",

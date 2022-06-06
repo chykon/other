@@ -1,3 +1,1 @@
-# tsib
-
-TypeScript In Browser
+# template-typescript
