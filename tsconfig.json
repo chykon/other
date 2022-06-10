@@ -27,8 +27,8 @@
     "outDir"                               : "web/tscjs", // original: "build/tsc/out"
 
     // JavaScript Support
-    "allowJs"                              : true,
-    "checkJs"                              : true,
+    "allowJs"                              : false,
+    "checkJs"                              : false,
 
     // Interop Constraints
     "forceConsistentCasingInFileNames"     : true,
