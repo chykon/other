@@ -42,9 +42,13 @@
 2. Do `wgcf register`
 3. Do `wgcf generate`
 4. Do `nmcli connection import type wireguard file ./wgcf-profile.conf`
-5. If not working - change endpoint to IP from `WARP Ingress IP`
-6. Visit `one.one.one.one/help`
-7. Visit `test-ipv6.com`
+5. Do `nmcli con down wgcf-profile`
+6. Do `systemctl restart NetworkManager`
+7. Do `nmcli con up wgcf-profile`
+8. If not working - do reboot
+9. If not working - change endpoint to IP from `WARP Ingress IP`
+10. Visit `one.one.one.one/help`
+11. Visit `test-ipv6.com`
 
 ### 4. Dynamic swap
 
@@ -56,7 +60,9 @@
 2. Do `./configure`
 3. Do `make`
 4. Do `make install`
-5. Do `cp swapspace.service /etc/systemd/system/`
-6. Do `systemctl enable swapspace`
-7. Do `systemctl start swapspace`
-8. Check the result by loading memory and swap
+5. Do `swapspace` and check output
+6. Do `cp swapspace.service /etc/systemd/system/`
+7. Do `systemctl enable swapspace`
+8. Do `systemctl start swapspace`
+9. Do `systemctl | grep swapspace` and check output
+10. Check the result by loading memory and swap
