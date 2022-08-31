@@ -33,10 +33,30 @@
 
 ### 3. VPN
 
-* TODO: Switch to "Official WARP Desktop Client" when it becomes stable
+* TODO: Use Node instead Shell
 * TODO: Script for automation
 * TODO: Script for check
 * TODO: Add links
+
+Official WARP Desktop Client:
+
+1. Add repository
+2. Fix repository version
+3. Install WARP
+4. If used `WireGuard`
+    1. Do `nmcli con down wgcf-profile`
+    2. Do `nmcli con mod wgcf-profile connection.autoconnect no`
+5. Do `warp-cli register`
+6. Do `warp-cli connect`
+7. Visit `one.one.one.one/help`
+8. Visit `test-ipv6.com`
+9. If connection breaks
+    1. Copy `files/usr/local/bin/warpfix.sh` to `/usr/local/bin/warpfix.sh`
+    2. Do `systemctl enable warpfix`
+    3. Do `systemctl start warpfix`
+    4. Do `systemctl status warpfix` and check output
+
+WireGuard:
 
 1. Download `wgcf`
 2. Do `wgcf register`
