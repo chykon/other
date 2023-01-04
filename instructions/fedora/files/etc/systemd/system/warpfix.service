@@ -1,0 +1,8 @@
+[Unit]
+Description=Fix connection for Cloudflare WARP
+
+[Service]
+ExecStart=sh /usr/local/bin/warpfix.sh
+
+[Install]
+WantedBy=multi-user.target

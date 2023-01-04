@@ -1,0 +1,8 @@
+[Unit]
+Description=Fix connection for Cloudflare WARP (WireGuard)
+
+[Service]
+ExecStart=bash /usr/local/bin/warpfix_wg.sh
+
+[Install]
+WantedBy=multi-user.target
